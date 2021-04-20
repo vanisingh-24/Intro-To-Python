@@ -1,4 +1,4 @@
-# Creation of String  
+## Creation of String  
      
 # String with single quotes   
 print('Welcome to the Geeks World')
@@ -9,8 +9,7 @@ print("I'm a Geek")
 # String with triple quotes
 print('''I'm a Geek and I live in a world of "Geeks"''')
 
-# Python Program to Access  
-# characters of String  
+## Accessing String  
      
 String1 = "GeeksForGeeks"
      
@@ -20,7 +19,7 @@ print(String1[0])
 # Printing Last character 
 print(String1[-1])  
 
-# Update / delete in a String
+## Update / delete in a String
      
 String1 = "Hello, I'm a Geek"
      

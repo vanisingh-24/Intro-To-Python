@@ -1,4 +1,4 @@
-# String slicing 
+## String slicing 
 String ='ASTRING'
   
 # Using slice constructor
@@ -10,9 +10,6 @@ print("String slicing")
 print(String[s1]) 
 print(String[s2]) 
 print(String[s3])
-
-# String slicing 
-String ='ASTRING'
   
 # Using extended indexing 
 print(String[:3])
