@@ -149,8 +149,31 @@ print("A.issuperset(B) : ", A.issuperset(B))
   
 print("B.issuperset(A) : ", B.issuperset(A))
 
-## 
+## symmetric_difference()
+# SYNTAX - set_A.symmetric_difference(set_B)
 
+set_A = {1, 2, 3, 4, 5}
+set_B = {6, 7, 3, 9, 4}
+set_C = {}
+print(set_A.symmetric_difference(set_B))
+
+print(A.symmetric_difference(C))
+print(B.symmetric_difference(C))
+
+print(set_A ^ set_B)
+
+## symmetric_difference_update()
+# SYNTAX - A.symmetric_difference_update(B) 
+
+A = {'p', 'a', 'w', 'a', 'n'}
+B = {'r', 'a', 'o', 'n', 'e'}
+ 
+# result is always none.
+result = A.symmetric_difference_update(B)
+ 
+print('A = ', A)
+print('B = ', B)
+print('result = ', result)
 
 
 
