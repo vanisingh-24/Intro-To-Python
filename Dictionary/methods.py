@@ -62,3 +62,93 @@ list1 = salary.values()
 # prints the sum of all salaries
 print(sum(list1)) 
 
+## update()
+# SYNTAX - dict.update([other])
+
+# update with another dictionary
+Dictionary1 = { 'A': 'Geeks', 'B': 'For', }
+Dictionary2 = { 'B': 'Geeks' }
+  
+print(Dictionary1)
+  
+Dictionary1.update(Dictionary2)
+print(Dictionary1)
+
+# update with an iterable
+Dictionary1 = { 'A': 'Geeks'}
+  
+print(Dictionary1)
+  
+Dictionary1.update(B = 'For', C = 'Geeks')
+print(Dictionary1)
+
+## setdefault()
+# SYNTAX - dict.setdefault(key, default_value)
+
+#when key is in the dictionary
+Dictionary1 = { 'A': 'Geeks', 'B': 'For', 'C': 'Geeks'}
+ 
+Third_value = Dictionary1.setdefault('C')
+print("Dictionary:", Dictionary1)
+print("Third_value:", Third_value)
+
+#when key is not in the dictionary
+Dictionary1 = { 'A': 'Geeks', 'B': 'For'}
+ 
+Third_value = Dictionary1.setdefault('C')
+print("Dictionary:", Dictionary1)
+print("Third_value:", Third_value)
+ 
+Fourth_value = Dictionary1.setdefault('D', 'Geeks')
+print("Dictionary:", Dictionary1)
+print("Fourth_value:", Fourth_value)
+
+## keys()
+# SYNTAX - dict.keys()
+
+Dictionary1 = {'A': 'Geeks', 'B': 'For', 'C': 'Geeks'}
+print(Dictionary1.keys())
+  
+# Creating empty Dictionary
+empty_Dict1 = {}
+print(empty_Dict1.keys())
+
+## items()
+# SYNTAX - dictionary.items()
+
+Dictionary1 = { 'A': 'Geeks', 'B': 4, 'C': 'Geeks' }
+
+print(Dictionary1.items())
+
+## has_key()
+# SYNTAX - dict.has_key(key)
+
+Dictionary1 = { 'A': 'Geeks', 'B': 'For', 'C': 'Geeks' }
+
+print(Dictionary1.has_key('A'))
+print(Dictionary1.has_key('For'))
+
+## fromkeys()
+# SYNTAX - fromkeys(seq, val)
+
+seq = { 'a', 'b', 'c', 'd', 'e' }
+  
+# using fromkeys() to convert sequence to dict initializing with None  
+res_dict = dict.fromkeys(seq)
+  
+print ("The newly created dict with None values : " + str(res_dict))
+  
+# using fromkeys() to convert sequence to dict initializing with 1  
+res_dict2 = dict.fromkeys(seq, 1)
+  
+print ("The newly created dict with 1 as value : " + str(res_dict2))
+
+
+
+
+
+
+
+
+
+
