@@ -64,3 +64,9 @@ tuple1[0] = -1
    
 # Deleting an element
 del tuple1[2] 
+
+## Finding length of a tuple
+
+tuple2 = ('python', 'geek')
+print(len(tuple2))
+
