@@ -278,7 +278,99 @@ print(list(result))
 result = filter(lambda x: x%2 == 0, seq)
 print(list(result))
 
+## map()
+# SYNTAX - map(func, iterable)
 
+# return double of n
+def addition(n):
+    return n+n
+
+numbers = (1,2,3,4)
+result = map(addition,numbers)
+print(list(result))
+
+# lambda function can also be used
+numbers = (1,2,3,4)
+result = map(lambda x: x + x, numbers)
+print(list(result))
+
+# Add two lists using map and lambda
+
+numbers1 = [1, 2, 3]
+numbers2 = [4, 5, 6]
+
+result = map(lambda x,y:x+y, numbers1,numbers2)
+print(list(result))
+
+# list of strings
+
+l = ['sat', 'bat', 'cat', 'mat']
+
+test = list(map(list, l))
+print(test)
+
+## lambda()
+# SYNTAX - lambda arguments: expression
+
+cube = lambda x: x*x*x
+print(cube(5))
+
+# map and filter
+li = [5, 7, 22, 97, 54, 62, 77, 23, 73, 61]
+ 
+result = filter(lambda x: (x%2 != 0), li)
+print(list(result))
+
+ages = [13, 90, 17, 59, 21, 60, 5]
+
+adult = filter(lambda age: age>18, ages)
+print(list(result))
+
+# map and lambda
+li = [5, 7, 22, 97, 54, 62, 77, 23, 73, 61]
+
+result = list(map(lambda x : x*2,li))
+print(result)
+
+animals = ['dog', 'cat', 'parrot', 'rabbit']
+
+upper = list(map(lambda animal: str.upper(animal), animals))
+print(upper)
+
+# map and reduce
+
+from functools import reduce
+
+li = [5, 8, 10, 20, 50, 100]
+sum = reduce((lambda x, y:x+y),li)
+print(sum)
+
+lis = [ 1 , 3, 5, 6, 2, ]
+print(reduce(lambda a,b : a if a>b else b,lis))
+
+## Reduce()
+# SYNTAX - reduce(fun, seq)
+li = [5, 8, 10, 20, 50, 100]
+sum = reduce((lambda x, y:x+y),li)
+print(sum)
+
+# reduce and operator functions
+import functools
+import operator
+
+lis = [ 1 , 3, 5, 6, 2, ]
+print(functools.reduce(operator.add,lis))
+print(functools.reduce(operator.mul,lis))
+
+print(functools.reduce(operator.add,["geeks","for","geeks"] ))
+
+## accumulate()
+# SYNTAX - accumulate(seq, fun)
+
+import itertools
+
+lis = [ 1, 3, 4, 10, 4 ]
+print(list(itertools.accumulate(lis, lambda x,y: x+y)))
 
 
 
