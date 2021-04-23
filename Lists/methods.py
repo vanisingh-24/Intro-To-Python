@@ -90,9 +90,20 @@ print (lis.index(3, 3, 6))
 print (lis.count(3))
 
 ## sum()
+# SYNTAX - sum(iterable, start)  
 
 List = [1, 2, 3, 4, 5]
 print(sum(List))
+
+numbers = [1,2,3,4,5,1,4,5]
+  
+# start parameter is not provided
+Sum = sum(numbers)
+print(Sum)
+  
+# start = 10
+Sum = sum(numbers, 10)
+print(Sum)
 
 ## remove()
 # SYNTAX - list.remove(element)
@@ -115,3 +126,170 @@ lis2.append(5)
 # No change in old list
 print ("The new list after adding new element : " + str(lis2))
 print ("The old list after adding new element to new list  : " + str(lis1))
+
+## ord()
+# SYNTAX - ord("string")
+
+value = ord("A")
+value1 = ord('A')
+ 
+print value, value1
+
+## chr()
+# SYNTAX - chr(num)
+
+print(chr(71), chr(101))
+
+numbers = [17, 38, 24]
+
+for number in numbers:
+    letter = chr(number)
+    print(letter)
+
+## cmp()
+# SYNTAX - cmp(list1, list2)
+
+# Integers
+list1 = [ 1, 2, 4, 3]
+list2 = [ 1, 2, 5, 8]
+list3 = [ 1, 2, 5, 8, 10]
+list4 = [ 1, 2, 4, 3]
+  
+# prints 1   
+print cmp(list2, list1)
+  
+# prints -1, because list3 has larger size than list2
+print cmp(list2, list3)
+  
+# prints 0 as list1 and list4 are equal
+print cmp(list4, list1)
+
+# multiple data types
+
+list1 = [ 1, 2, 4, 10]
+list2 = [ 1, 2, 4, 'a']
+list3 = [ 'a', 'b', 'c']
+list4 = [ 'a', 'c', 'b']
+  
+print cmp(list2, list1)
+  
+print cmp(list2, list3)
+  
+print cmp(list3, list4)
+
+## any()
+# SYNTAX - any(list of iterables)
+
+# Since all are false, false is returned
+print (any([False, False, False, False]))
+  
+# Here the method will short-circuit at the second item (True) and will return True.
+print (any([False, True, False, False]))
+  
+# Here the method will short-circuit at the first (True) and will return True.
+print (any([True, False, False, False]))
+
+## all()
+# SYNTAX - all(list of iterables)
+
+# Here all the iterables are True so all will return True and the same will be printed
+print (all([True, True, True, True]))
+  
+# Here the method will short-circuit at the first item (False) and will return False.
+print (all([False, True, True, False]))
+  
+# This statement will return False, as no True is found in the iterables
+print (all([False, False, False]))
+
+# Example1
+list1 = []
+list2 = []
+
+for i in range(1,11):
+    list1.append(4*i)
+
+for i in range(0,10):
+    list2.append(list1[i]%5==0)
+
+print(any(list2))
+
+# Example2
+
+list1 = []
+list2 = []
+
+for i in range(1,21):
+    list1.append(4*i-3)
+
+for i in range(0,20):
+    list2.append(list1[i]%2 == 1)
+
+print(all(list2))
+
+## Enumerate()
+# SYNTAX - enumerate(iterable, start=0)
+
+l1 = ["eat","sleep","repeat"]
+s1 = "geek"
+
+obj1 = enumerate(l1)
+onj2 = enumerate(s1)
+
+print(list(enumerate(l1)))
+
+# changing start index to 2 from 0
+print (list(enumerate(s1,2)))
+
+# enumerate function in loops
+l1 = ["eat","sleep","repeat"]
+
+for el in enumerate(l1):
+    print(el)
+
+for count, el in enumerate(l1, 100):
+    print(count,el)
+
+## filter()
+# SYNTAX - filter(function, sequence)
+
+def fun(variable):
+    letter = ['a', 'e', 'i', 'o', 'u']
+    if (variable in letters):
+        return True
+    else:
+        return False
+
+sequence = ['g', 'e', 'e', 'j', 'k', 's', 'p', 'r']
+
+filtered = filter(fun, sequence)
+
+for s in filtered:
+    print(s)
+
+# used with lambda functions 
+# a list contains both even and odd numbers.
+seq = [0, 1, 2, 3, 5, 8, 13]
+
+# result contains odd numbers of the list
+result = filter(lambda x: x%2 !=0, seq)
+print(list(result))
+
+# result contains even numbers of the list
+result = filter(lambda x: x%2 == 0, seq)
+print(list(result))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
