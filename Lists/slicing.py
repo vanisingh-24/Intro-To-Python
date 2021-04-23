@@ -1,4 +1,5 @@
 ## Slicing
+# SYNTAX - [start : stop : steps] 
 
 List = ['G','E','E','K','S','F','O','R','G','E','E','K','S']
 

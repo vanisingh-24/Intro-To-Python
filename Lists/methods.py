@@ -326,6 +326,15 @@ ages = [13, 90, 17, 59, 21, 60, 5]
 adult = filter(lambda age: age>18, ages)
 print(list(result))
 
+# filtering odd square which are divisible by 5
+lst = filter(lambda x : x % 5 == 0, 
+      [x ** 2 for x in range(1, 11) if x % 2 == 1])
+print (list(lst))
+
+#  filtering negative numbers
+lst = filter((lambda x: x < 0), range(-5,5))
+print (list(lst))
+
 # map and lambda
 li = [5, 7, 22, 97, 54, 62, 77, 23, 73, 61]
 
@@ -347,6 +356,9 @@ print(sum)
 
 lis = [ 1 , 3, 5, 6, 2, ]
 print(reduce(lambda a,b : a if a>b else b,lis))
+
+#  implementing max() function, using
+print (functools.reduce(lambda a,b: a if (a > b) else b, [7, 12, 45, 100, 15]))
 
 ## Reduce()
 # SYNTAX - reduce(fun, seq)
