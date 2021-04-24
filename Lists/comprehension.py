@@ -30,6 +30,20 @@ table = [[a,b,a*b] for b in range(1,11)]
 for i in table:
     print(i)
 
-    
 
 
+## Nested List Comprehensions 
+matrix = [[j for j in range(5)] for i in range(5)]
+print(matrix)
+
+# Nested List Comprehension to flatten a given 2-D matrix
+matrix = [[1, 2, 3], [4, 5], [6, 7, 8, 9]]
+
+flatten = [j for i in matrix for j in i]
+print(flatten)
+
+# Nested List comprehension with an if condition
+planets = [['Mercury', 'Venus', 'Earth'], ['Mars', 'Jupiter', 'Saturn'], ['Uranus', 'Neptune', 'Pluto']]
+  
+flatten = [planet for i in planets for planet in i if len(planet)<6]
+print(flatten)
