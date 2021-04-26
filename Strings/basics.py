@@ -28,4 +28,3 @@ String1[2] = 'p'
    
 # Deleting a character   
 del String1[2]
-

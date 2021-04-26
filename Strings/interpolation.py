@@ -42,6 +42,10 @@ print("{1} love {0}!!".format("GeeksforGeeks","Geeks"))
 # Keyword arguments
 print("{gfg} is a {0} science portal for {1}".format("computer", "geeks", gfg ="GeeksforGeeks"))
 
+# Keyword Formatting
+String1 = "{l} {f} {g}".format(g = 'Geeks', f = 'For', l = 'Life')
+print(String1)
+
 # Convert base-10 decimal integers to floating point numeric constants
 print ("This site is {0:f}% securely {1}!!".format(100, "encrypted"))
 
@@ -69,6 +73,10 @@ print("{0:4} was founded in {1:16}!".format("GeeksforGeeks", 2009))
 print("{0:^16} was founded in {1:<4}!".format("GeeksforGeeks", 2009))
  
 print("{:*^20s}".format("Geeks"))
+
+# String alignment
+String1 = "|{:<10}|{:^10}|{:>10}|".format('Geeks','for','Geeks')
+print(String1)
 
 #3 f-strings
 
