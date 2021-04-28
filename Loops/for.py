@@ -45,6 +45,18 @@ for i in range(1, 4):
 else: 
     print("No Break")
 
+def contains_even_number(l):
+    for el in l:
+        if el % 2 == 0:
+            print("list contains an even number")
+            break
+
+        else:
+            print("list does not contain even number")
+# Driver Code
+contains_even_number([1,9,8])
+contains_even_number([1,3,5])
+
 
 ## range() function
 

@@ -17,7 +17,24 @@ count = 0
 while (count < 5): count = count + 1; print("Hello Geeks")
 
 
+## While-Else Loop
 
+# Executed because no break 
+i = 0
+while i < 4:
+    i += 1
+    print(i)
+else:
+    print("No Break")
+
+# Not executed as there is a break 
+i = 0 
+while i < 4: 
+    i += 1
+    print(i) 
+    break
+else: 
+    print("No Break")
 
 
 
