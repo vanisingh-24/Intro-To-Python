@@ -26,8 +26,30 @@ d = dict()
 d['xyz'] = 123
 d['abc'] = 456
 for i in d:
-    print("%s %d" %(i, d[i]))
+    print("%s %d" %(i,d[i]))
 
+# Iterating by index
+ 
+list = ["geeks", "for", "geeks"]
+for i in range(len(list)):
+    print(list[i])
+
+fruits = ["apple", "orange", "kiwi"]
+
+# Creating an iterator object from that iterable i.e fruits
+iter_obj = iter(fruits)
+
+# Infinite while loop
+while True:
+    try:
+
+        # Getting next item
+        fruit = next(iter_obj)
+        print(fruit)
+
+        # if StopIteration is raised, break from loop
+    except StopIteration:
+        break
 
 ##  For-Else Loop
 
@@ -72,8 +94,39 @@ for i in range(1,10):
     sum = sum + i
 print(sum)
 
+# incremented by 2
+for i in range(2, 25, 2):
+    print(i, end =" ")
 
+# incremented by -2
+for i in range(25, 2, -2):
+    print(i, end =" ")
 
+# Concatenation of two range() functions
 
+from itertools import chain
 
+result = chain(range(5), range(10,20,2))
 
+for i in result:
+    print(i, end=" ")
+
+# Accessing range() with index value
+
+el = range(10)[0]
+print("First Element", el)
+
+el = range(10)[-1]
+print("Last Element",el)
+
+el = range(10)[4]
+print("Fifth Element", el)
+
+# checking a type of range
+type(range(3))
+
+## Nested For Loops
+
+for i in range(1,5):
+    for j in range(i):
+        print(i, end= " ")
