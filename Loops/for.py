@@ -34,23 +34,6 @@ list = ["geeks", "for", "geeks"]
 for i in range(len(list)):
     print(list[i])
 
-fruits = ["apple", "orange", "kiwi"]
-
-# Creating an iterator object from that iterable i.e fruits
-iter_obj = iter(fruits)
-
-# Infinite while loop
-while True:
-    try:
-
-        # Getting next item
-        fruit = next(iter_obj)
-        print(fruit)
-
-        # if StopIteration is raised, break from loop
-    except StopIteration:
-        break
-
 ##  For-Else Loop
 
 # Executed because no break
@@ -130,3 +113,6 @@ type(range(3))
 for i in range(1,5):
     for j in range(i):
         print(i, end= " ")
+
+
+
