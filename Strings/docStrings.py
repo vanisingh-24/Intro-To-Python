@@ -1,4 +1,10 @@
 ## Python DocStrings
+# SYNTAX - print(function_name.__doc__)
+
+def say_Hi():
+    "Hello! geeks!"
+ 
+print(say_Hi.__doc__)
 
 # Using triple single quotes
 def my_function():
