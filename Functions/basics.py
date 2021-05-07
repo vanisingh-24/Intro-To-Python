@@ -25,7 +25,28 @@ print(square_value(-4))
 
 ## Pass by reference OR pass by value
 
+# Here x is a new reference to same list lst
+def myFun(x):
+    x[0] = 20
 
+lst = [10, 11,12,13,14,15]
+myFun(lst)
+print(lst)
+
+def myFun(x):
+ 
+    # After below line link of x with previous object gets broken. A new object is assignedto x.
+    x = [20, 30, 40]
+ 
+lst = [10, 11, 12, 13, 14, 15]
+myFun(lst)
+print(lst)
+
+## Anonymous functions
+
+cube = lambda x : x*x*x
+
+print(cube(7))
 
 # Python function to check whether x is even or odd
  
