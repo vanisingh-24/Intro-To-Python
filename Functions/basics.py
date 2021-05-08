@@ -23,6 +23,65 @@ def square_value(num):
 
 print(square_value(-4))
 
+def add(a,b):
+    return a + b
+
+def is_true(a):
+    return bool(a)
+
+res = add(2,3)
+print(res)
+res = is_true(2<5)
+print(res)
+
+## Returning multiple values
+
+# 1. Using Object
+
+class Test:
+    def __init__(self):
+        self.str = 'gfg'
+        self.x = 20
+
+def fun():
+    return Test()
+
+t = fun()
+print(t.str)
+print(t.x)
+
+# 2. Using Tuple
+
+def fun():
+    str = 'geeksforgeeks'
+    x = 20
+    return (str,x)
+
+str,x = fun()   #assigning the returned tuple
+print(str)
+print(x)
+
+# 3. Using a list
+
+def fun():
+    str = "geeksforgeeks"
+    x = 20   
+    return [str,x]
+
+list = fun()
+print(list)
+
+# 4. Using a dictionary
+
+def fun():
+    d = dict()
+    d['str'] = 'gfg'
+    d['x'] = 20
+    return d
+
+d = fun()
+print(d)
+
 ## Pass by reference OR pass by value
 
 # Here x is a new reference to same list lst
