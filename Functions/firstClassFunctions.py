@@ -36,4 +36,11 @@ def create_adder(x):
 add_15 = create_adder(15)
 print(add_15(10))
 
+def outer(x):
+    return x*10
 
+def my_fun():
+    return outer
+
+res = my_fun()
+print(res(10))
