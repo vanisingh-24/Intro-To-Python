@@ -18,3 +18,20 @@ def main():
 # Driver Code
 if __name__ =="__main__":
   main()
+
+# OR 
+# Using SETS
+
+def count(str1, str2):
+  string1 = set(str1)
+  string2 = set(str2)
+
+  common = string1 & string2
+
+  print("Number of matched characters are:" + str(len(common)))
+
+if __name__ == "__main__":
+  str1 = 'aabcddekll12@'
+  str2 = 'bb2211@55k'
+
+  count(str1, str2)
