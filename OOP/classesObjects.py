@@ -98,3 +98,8 @@ class Dog:
 Rodger = Dog("pug")
 Rodger.setColor("brown")
 print(Rodger.getColor())
+
+# Creating an empty class
+
+class Test:
+  pass
