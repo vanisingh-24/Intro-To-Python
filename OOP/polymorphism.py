@@ -1,5 +1,19 @@
 # Polymorphism in Python
 
+class A():
+  def show(self):
+    print("Inside A")
+
+class B():
+  def show(self):
+    print("Inside B")
+
+# Driver Code
+a = A()
+a.show()
+b = B()
+b.show()
+
 # inbuilt polymorphic functions
 
 print(len("geeks"))
