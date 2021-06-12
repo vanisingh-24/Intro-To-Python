@@ -22,10 +22,27 @@ class MessageWriter(object):
         self.file = open(self.file_name, 'w')
         return self.file
 
-    def __exit__(Self):
+    def __exit__(self):
         self.file.close()
 
 with MessageWriter('my_file.txt') as xfile:
     xfile.write('Helloooooo')
 
-    
+# The contextlib module
+
+from contextlib import contextmanager
+
+class messageWriter(object):
+    def __init__(self, filename):
+        self.file_name = filename
+
+    def open_file(self):
+        try:
+            file = open(self.file_name, 'w')
+            yield file
+        finally:
+            file.close()
+
+message_writer = MessageWriter('hello.txt')
+with message_writer.open_file() as xfile:
+    xfile.write('Helloooooo')
