@@ -42,19 +42,6 @@ print(file1.read())
 print()
 file1.close()
 
-## With statement
-# SYNTAX - with open filename as file
-
-# # write data to a file using with statement
-
-L = ["This is Delhi \n", "This is Paris \n", "This is London \n"]
-
-with open("file.txt", "w") as file1:
-    file1.write("Hello \n")
-    file1.writelines(L)
-
-with open("file.txt", "r") as file1:
-    print(file1.read())
 
 
 
