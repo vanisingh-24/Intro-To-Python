@@ -22,3 +22,35 @@ GFG.Geeks()
 print(GFG.location)
 emp = GFG.Employee('Vani','Developer')
 emp.show()
+
+
+# Python built in modules
+
+import math
+print(math.sqrt(25))
+print(math.pi)
+print(math.degrees(2))
+print(math.radians(60))
+print(math.sin(2))
+print(math.cos(0.5))
+print(math.factorial(4))
+
+import random
+
+# printing random integer between 0 and 5
+print(random.randint(0,5))
+
+# random number between 0 and 100
+print(random.random()*100)
+
+List = [1, 4, True, 800, "python", 27, "hello"]
+ 
+print(random.choice(List))
+
+import datetime
+from datetime import date
+import time
+
+print(time.time())
+
+print(date.fromtimestamp(454554))
