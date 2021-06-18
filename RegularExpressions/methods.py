@@ -49,6 +49,7 @@ p  = re.compile('ab*')
 print(p.findall("ababbaabbb"))
 
 # 3. re.match()
+# SYNTAX - re.match(pattern, string, flags = 0)
 
 def findMonthAndDate(string): 
        
