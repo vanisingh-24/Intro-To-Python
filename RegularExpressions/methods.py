@@ -19,6 +19,35 @@ import re
 p = re.compile('[a-e]')
 print(p.findall("Aye, said Mr. Gibenson Stark"))
 
+import re
+
+# \d is equivalent to [0-9].
+p = re.compile('\d')
+print(p.findall("I went to him at 11 A.M. on 4th July 1886"))
+
+# \d+ will match a group on [0-9], group of one or greater size
+p = re.compile('\d+')
+print(p.findall("I went to him at 11 A.M. on 4th July 1886"))
+
+import re
+
+# \w is equivalent to [a-zA-Z0-9_].
+p = re.compile('\w')
+print(p.findall("He said * in some_lang."))
+
+# \w+ matches to group of alphanumeric character.
+p = re.compile('\w+')
+print(p.findall("I went to him at 11 A.M., he said *** in some_language."))
+
+# \W matches to non alphanumeric characters.
+p = re.compile('\W')
+print(p.findall("he said *** in some_language."))
+
+import re
+
+p  = re.compile('ab*')
+print(p.findall("ababbaabbb"))
+
 # 3. re.match()
 
 def findMonthAndDate(string): 
@@ -62,4 +91,35 @@ if match != None:
 else:
   print("The regex pattern does not match")
 
+# 5. re.escape()
+# SYNTAX - re.escape(string)
+
+import re
+
+print(re.escape("This is Awseome even 1 AM"))
+print(re.escape("I Asked what is this [a-9], he said \t ^WoW"))
+
+# 6. re.sub()
+# SYNTAX - re.subn(pattern, repl, string, count=0, flags=0)
+
+import re
+
+print(re.sub('ub', '~*','Subject has Uber booked already', flags = re.IGNORECASE))
+
+print(re.sub('ub','~*','Subject has Uber already booked'))
+
+print(re.sub('ub', '~*' , 'Subject has Uber booked already', count=1, flags = re.IGNORECASE))
+
+print(re.sub(r'\sAND\s', ' & ', 'Baked Beans And Spam', flags = re.IGNORECASE))
+
+# 7. re.subn()
+# SYNTAX - re.subn(pattern, repl, string, count=0, flags=0)
+
+import re
+
+print(re.subn('ub','~*' , 'Subject has Uber booked already'))
+t = re.subn('ub','~*','Subject has Uber booked already', flags = re.IGNORECASE)
+print(t)
+print(len(t))
+print(t[0])
 
