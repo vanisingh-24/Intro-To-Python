@@ -37,13 +37,23 @@ divide(3,2)
 try:
     a = 3
     if a < 4:
+        # throws ZeroDivisionError for a = 3 
         b = a/(a-3)
-
+    
+    # throws NameError if a >= 4
     print('Value of b is', b)
 except(ZeroDivisionError, NameError):
     print('Error')
 
+# Finally Keyword in Python
 
+try:
+  k = 5//0
+  print(k)
+except ZeroDivisionError:
+  print("Can't divide by zero")
+finally:
+  print('This is always executed')
 
 
 
