@@ -3,6 +3,23 @@
 
 class Solution:
     def swapPairs(self, head: ListNode) -> ListNode:
+        d = d1 = ListNode(0)
+        d.next = head
+        
+        while d.next and d.next.next:
+            p = d.next
+            q = d.next.next
+            
+            d.next = q
+            p.next = q.next
+            q.next = p
+            d = p
+        return d1.next
+    
+# OR
+
+class Solution:
+    def swapPairs(self, head: ListNode) -> ListNode:
         dummy = ListNode(0, head)
         prev, curr = dummy, head
         
