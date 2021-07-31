@@ -14,5 +14,23 @@ class Solution:
             res = 10*res + x%10
             x = x//10
         
+        if(res < -2**31 or res > 2**31 - 1): return 0
+        return res if not isNeg else -1*res
+
+# OR
+
+class Solution:
+    def reverse(self, x: int) -> int:
+        res = 0
+        isNeg = False
+        
+        if(x<0):
+            isNeg = True
+            x = -1*x
+            
+        while(x!=0):
+            res = 10*res + x%10
+            x = x//10
+        
         if(res > 2**31 -1 or -1**res < -2**31): return 0
         return res if not isNeg else -1*res
