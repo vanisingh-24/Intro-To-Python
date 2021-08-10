@@ -15,3 +15,16 @@ class Solution:
             prev1 = prev2
             prev2 = curr
         return curr
+
+# OR
+
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        # Bottom Up Memoization
+        one, two = 1, 1
+        
+        for i in range(n - 1):
+            temp = one
+            one = one + two
+            two = temp
+        return one
