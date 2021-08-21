@@ -3,6 +3,16 @@
 
 class Solution:
     def lengthOfLastWord(self, s: str) -> int:
+        # String split
+        if s.split():
+            return len(s.split()[-1])
+        else:
+            return 0
+        
+# OR
+
+class Solution:
+    def lengthOfLastWord(self, s: str) -> int:
         length = len(s)
         count = 0
         
