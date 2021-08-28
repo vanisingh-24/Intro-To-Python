@@ -4,6 +4,26 @@
 
 class Solution:
     def mySqrt(self, x: int) -> int:
+        l = 0
+        r = x
+        
+        # Binary Search
+        while l <= r:
+            mid = (l+r)//2
+            if mid*mid == x:
+                return mid
+            elif mid*mid < x:
+                res = mid
+                l = mid + 1
+            else:
+                r = mid - 1
+        return res
+            
+
+#OR
+
+class Solution:
+    def mySqrt(self, x: int) -> int:
         import math
         
         return int(math.sqrt(x))
