@@ -2,6 +2,18 @@
 
 class Solution:
     def isSymmetric(self, root: Optional[TreeNode]) -> bool:
+        if root is None:
+            return True
+        return self.isMirror(root.left, root.right)
+    def isMirror(self, left, right):
+        if left and right:
+            return left.val == right.val and self.isMirror(left.left, right.right) and self.isMirror(left.right, right.left)
+        return left == right
+
+# OR
+
+class Solution:
+    def isSymmetric(self, root: Optional[TreeNode]) -> bool:
         if root == None:
             return True
         return self.isMirror(root, root)
