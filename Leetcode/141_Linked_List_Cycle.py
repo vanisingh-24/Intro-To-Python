@@ -3,16 +3,15 @@
 # Internally, pos is used to denote the index of the node that tail's next pointer is connected to. Note that pos is not passed as a parameter.
 # Return true if there is a cycle in the linked list. Otherwise, return false.
 
-
 class Solution:
     def hasCycle(self, head: ListNode) -> bool:
         slow = fast = head
         
         while slow and fast and fast.next:
-            if slow == fast: return True
-            
             slow = slow.next
             fast = fast.next.next
+            if slow == fast: return True
             
         return False
+        
         
