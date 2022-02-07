@@ -12,8 +12,8 @@ kthSmallest(arr,k)
 
 # Quick Select Algorithm
 
-def kthSmallest(arr, k):
-        kth = len(arr) - k
+def kthLargest(arr, k):
+        k = len(arr) - k
         
         def quickSelect(l, r):
             pivot, p = arr[r], l
@@ -34,4 +34,4 @@ def kthSmallest(arr, k):
 
 arr = list(map(int, input().split(' ')))
 k = int(input())
-kthSmallest(arr,k)
+kthLargest(arr,k)
