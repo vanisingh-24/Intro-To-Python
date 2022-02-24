@@ -2,6 +2,14 @@
 
 # union
 
+# SIMPLE SOLUTION
+
+a=set(a)
+b=set(b)
+return list(sorted(a.union(b)))
+
+# MERGE PROCEDURE
+
 def union(arr1, arr2, m, n):
   i = 0
   j = 0
@@ -32,6 +40,14 @@ n = len(arr2)
 union(arr1, arr2, m, n)
 
 # intersection
+
+# SIMPLE SOLUTION
+
+a=set(a)
+b=set(b)
+return list(sorted(a.intersection(b)))
+
+# MERGE PROCEDURE
 
 def intersection(arr1, arr2, m, n):
   i = 0
