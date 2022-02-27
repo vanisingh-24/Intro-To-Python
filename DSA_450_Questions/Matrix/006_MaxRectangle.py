@@ -38,3 +38,7 @@ class Solution:
  
         return max_area
 
+M = [[0,1,1,0],[1,1,1,1],[1,1,1,1],[1,1,0,0]]
+m = 4
+n = 4
+maxArea(M, n, m)
