@@ -3,13 +3,25 @@
 # Naive Solution
 
 def median(self, matrix, r, c):
-        b=[]
-        for i in matrix:
-            for j in i:
-                b.append(j)
-        b.sort()
-        c=len(b)
-        return b[c//2]
+    b=[]
+    for i in matrix:
+        for j in i:
+            b.append(j)
+    b.sort()
+    c=len(b)
+    return b[c//2]
+
+# OR
+
+class Solution:
+    def median(self, matrix, r, c):
+        arr=[]
+        for i in range(r):
+            for j in range(c):
+                arr.append(matrix[i][j])
+        n=r*c
+        arr=sorted(arr)
+        return arr[(n//2)]
 
 # Binary Search
 

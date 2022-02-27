@@ -3,17 +3,17 @@
 
 # Brute Force Approach
 
-def rowWithMax1s(self,arr, n, m):
-	    Max=0
-        temp=0
-        for i in range(n):
-            count=0
-            if(arr[i].count(1)>Max):
-                Max=arr[i].count(1)
-                temp=i
+def rowWithMax1s(arr, n, m):
+	Max=0
+    temp=0
+    for i in range(n):
+        count=0
+        if(arr[i].count(1)>Max):
+            Max=arr[i].count(1)
+            temp=i
         if(Max==0):
             return -1
-        return temp
+    return temp
 
 # Binary Search Approach
 
