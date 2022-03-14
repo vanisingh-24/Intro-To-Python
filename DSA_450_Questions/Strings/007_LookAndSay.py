@@ -1,5 +1,7 @@
 ## Given an integer n. Return the nth row of the following look-and-say pattern.
 
+# Recursion
+
 class Solution:
 
     def lookandsay(self, n):

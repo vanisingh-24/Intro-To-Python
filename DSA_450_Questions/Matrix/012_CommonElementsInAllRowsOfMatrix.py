@@ -5,8 +5,7 @@
 def commonElements(mat):
   if not mat or not len(mat):
     return -1
-
-  mat[0].sort()
+    
   d = {}
   for i in range(len(mat)):
     for j in range(len(mat[0])):

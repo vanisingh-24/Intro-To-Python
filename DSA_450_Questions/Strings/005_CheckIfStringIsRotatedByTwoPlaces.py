@@ -13,7 +13,7 @@ def isRotated(s1, s2):
     anticlockwise = anticlockwise + s2[l-2:] + s2[0: l-2]
     clockwise = clockwise + s2[2:] +s2[0:2]
 
-    return (s1 == clockwise or s2 == anticlockwise)
+    return (s1 == clockwise or s1 == anticlockwise)
 
 s1 = "amazon"
 s2 = "azonam"
