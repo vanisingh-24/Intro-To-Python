@@ -33,8 +33,8 @@ def union(arr1, arr2, m, n):
     print(arr2[j])
     j += 1
 
-arr1 = list(map(int, input().split()))
-arr2 = list(map(int, input().split()))
+arr1 = [1, 2, 4]
+arr2 = [2, 3, 5, 7]
 m = len(arr1)
 n = len(arr2)
 union(arr1, arr2, m, n)
@@ -62,8 +62,8 @@ def intersection(arr1, arr2, m, n):
       i += 1
       j += 1
 
-arr1 = list(map(int, input().split()))
-arr2 = list(map(int, input().split()))
+arr1 = [1, 2, 4, 5, 6]
+arr2 = [2, 3, 5, 7]
 m = len(arr1)
 n = len(arr2)
 intersection(arr1, arr2, m, n)
