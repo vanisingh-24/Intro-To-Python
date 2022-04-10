@@ -10,7 +10,7 @@ def fourSum(arr, k):
             for l in range(j+1, n-1):
                 for r  in range(l+1, n):
                     if arr[i]+arr[j]+arr[l]+arr[r] == k:
-    return (arr[i],arr[j],arr[l], arr[r])
+                        return (arr[i],arr[j],arr[l], arr[r])
 
 arr = [0,0,2,1,1]
 k = 3
