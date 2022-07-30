@@ -17,3 +17,22 @@ def isSumTree(self,root):
         else:
             return 0
 
+# Alternate Solution
+
+def solve(self,root):
+        if not root:
+            return 0
+        if not root.left and not root.right:
+            return root.data
+        l = self.solve(root.left)
+        r = self.solve(root.right)
+        if l+r != root.data:
+            self.flag = 0
+        return l+r+root.data
+        
+        
+def isSumTree(self,root):
+        self.flag = 1
+        self.solve(root)
+        return self.flag
+
