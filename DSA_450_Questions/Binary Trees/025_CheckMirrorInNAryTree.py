@@ -21,3 +21,19 @@ def checkMirrorTree(self, n, e, A, B):
             if dict1[i] != list(reversed(dict2[i])):
                 return 0
         return 1
+    
+# Alternate Solution: Hashing
+
+def checkMirrorTree(self, n, e, A, B):
+        m = dict()
+        for i in range(0,2*e,2):
+            if A[i] in m:
+               m[A[i]].append(A[i+1])
+            else:
+                m[A[i]] = []
+        for i in range(0,2*e,2):
+            if B[i] in m and len(m[B[i]]) > 0:
+                if m[B[i]][-1] != B[i+1]:
+                   return 0
+                m[B[i]].pop()
+        return 1
