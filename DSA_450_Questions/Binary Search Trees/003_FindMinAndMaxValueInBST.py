@@ -5,5 +5,4 @@ def minValue(root):
         return -1
     if root.left is None:
         return root.data
-    ans = minValue(root.left)
-    return ans
+    return minValue(root.left)
