@@ -2,6 +2,17 @@
 ## The values smaller than root go to the left side
 ## The values greater and equal to the root go to the right side
 
+
+def getCount(self,root,low,high):
+        if not root:
+            return 0
+        ans = 0
+        ans += self.getCount(root.left, low, high)
+        if low <= root.data <= high:
+            ans += 1
+        ans += self.getCount(root.right, low, high)
+        return ans
+    
 def getCount(self,root,low,high):
         if root==None:
             return 0
