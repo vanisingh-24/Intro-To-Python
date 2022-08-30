@@ -4,6 +4,19 @@
 
 # Approach 1: Hashing
 
+def removeDuplicates(self, head):
+        h = set()
+        curr = head
+        h.add(head.data)
+        while curr.next:
+            if curr.next.data in h:
+                curr.next = curr.next.next
+            else:
+                h.add(curr.next.data)
+                curr = curr.next
+        return head
+    
+# OR
 class Solution:
     def removeDuplicates(self, head):
         if not head:
