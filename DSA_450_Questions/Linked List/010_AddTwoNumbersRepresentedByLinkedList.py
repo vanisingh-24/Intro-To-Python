@@ -1,5 +1,34 @@
 ## Given two numbers represented by two linked lists of size N and M. The task is to return a sum list.
 
+def addTwoLists(self, first, second):
+        nums1, nums2 = 0, 0
+        
+        while first:
+            nums1 = nums1 * 10 + first.data
+            first = first.next
+        while second:
+            nums2 = nums2 * 10 + second.data
+            second = second.next
+        sum = nums1 + nums2
+        curr = head = Node(0)
+        if sum == 0:
+            return head
+        while sum > 0:
+            head.next = Node(sum % 10)
+            head = head.next
+            sum //= 10
+            
+        prev = None
+        head = curr.next
+        while head:
+            next = head.next
+            head.next = prev
+            prev = head
+            head = next
+        return prev
+    
+# OR
+
 class Node:
     def __init__(self, data):
         self.data = data

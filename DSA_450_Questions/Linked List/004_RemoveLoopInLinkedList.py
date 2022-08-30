@@ -28,3 +28,24 @@ class Solution:
                 return 1
             ptr=ptr.next
             i+=1
+
+# Approach 3: Floyd's Cycle Algorithm
+
+class Solution:
+    def removeLoop(self, head):
+        slow, fast = head, head
+        
+        while fast and fast.next:
+            fast = fast.next.next
+            slow = slow.next
+            
+            if slow == fast:
+                slow = head
+                if slow == fast:
+                    while fast.next != slow:
+                        fast = fast.next
+                else:
+                    while slow.next != fast.next:
+                        slow = slow.next
+                        fast = fast.next
+                fast.next = None

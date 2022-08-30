@@ -53,3 +53,21 @@ nodeJ.next = nodeD
 
 head=detectCycle(head)
 print(head.data)
+
+#OR 
+
+def detectCycle(self, head):
+        slow, fast = head, head
+        
+        while fast and fast.next:
+            fast = fast.next.next
+            slow = slow.next
+            if slow == fast:
+                break
+        else:
+            return None
+        slow = head
+        while slow != fast:
+            slow = slow.next
+            fast = fast.next
+        return slow
