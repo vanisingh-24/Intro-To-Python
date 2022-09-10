@@ -13,12 +13,23 @@ def isCircular(head):
 # OR
 
 def isCircular(head):
-    if head is None:
-        return True
-    
     slow = fast = head
-    while fast and fast.next:
+        
+    while slow and fast and fast.next:
         slow = slow.next
         fast = fast.next.next
-        if fast == slow:
+        if slow == fast:
             return True
+    return False
+        
+# OR
+
+def hasCycle(self, head):
+        s = set()
+        while head:
+            if head in s:
+                return True
+            s.add(head)
+            head = head.next
+        return False
+        
